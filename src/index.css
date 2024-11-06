@@ -6,6 +6,10 @@ body {
   background-color: #141414;
 }
 
-#root{
+#root {
   height: 100vh;
+  color: white;
+}
+
+* {
 }

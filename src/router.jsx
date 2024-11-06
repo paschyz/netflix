@@ -7,14 +7,13 @@ export default createBrowserRouter([
     element: <Outlet />,
     children: [
       {
-        index:true,
+        index: true,
         element: <Profiles />,
       },
       {
         path: "/home",
         element: <Home />,
       },
-
     ],
   },
 ]);
