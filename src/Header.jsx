@@ -11,17 +11,27 @@ export default function Header(params) {
             />
           </a>
         </div>
-        <ul className="flex gap-8 ">
-          <li className="cursor-pointer">Home</li>
-          <li className="cursor-pointer">TV Shows</li>
-          <li className="cursor-pointer">Movies</li>
-          <li className="cursor-pointer">New & Popular</li>
-          <li className="cursor-pointer">My List</li>
-          <li className="cursor-pointer">Browse by Languages</li>
+        <ul className="flex gap-8 font-light text-[#E5E5E5] ">
+          <li className="pointer-events-none font-semibold">Home</li>
+          <li className="cursor-pointer hover:text-[#B3B3B3] transition duration-500">
+            TV Shows
+          </li>
+          <li className="cursor-pointer hover:text-[#B3B3B3] transition duration-500">
+            Movies
+          </li>
+          <li className="cursor-pointer hover:text-[#B3B3B3] transition duration-500">
+            New & Popular
+          </li>
+          <li className="cursor-pointer hover:text-[#B3B3B3] transition duration-500">
+            My List
+          </li>
+          <li className="cursor-pointer hover:text-[#B3B3B3] transition duration-500">
+            Browse by Languages
+          </li>
         </ul>
       </div>
       <div className="flex items-center gap-8 ">
-        <div className="h-8 cursor-pointer">
+        <div className="search-icon h-8 cursor-pointer">
           <svg
             width="100%"
             height="100%"
@@ -42,8 +52,9 @@ export default function Header(params) {
         <div>
           <a className="">Kids</a>
         </div>
-        <div className="h-8 cursor-pointer">
+        <div className="bell-icon h-8 group/bell group/carrier">
           <svg
+            className="cursor-pointer"
             width="100%"
             height="100%"
             viewBox="0 0 24 24"
@@ -58,8 +69,30 @@ export default function Header(params) {
               stroke-linejoin="round"
             />
           </svg>
+          <div className="opacity-0  group/hitbox bg-white  absolute border-t-[3px] right-[160px] top-[40px] w-[510px] h-[148px]"></div>
+          <div className="hidden hover:flex group-hover/hitbox:flex  group-hover/bell:flex items-center justify-center absolute border-t-[3px] border-white bg-black opacity-75 right-[160px] top-[87px] w-[510px] h-[148px] hover:opacity-100">
+            <p className="text-[#6D6D6D] text-xl  ">No recent notifications</p>
+
+            <svg
+              className=" absolute top-[-15px] right-[9px] w-6 h-6 rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path d="M18 9H6L12 15L18 9Z" fill="#ffffff"></path>{" "}
+              </g>
+            </svg>
+          </div>
         </div>
-        <div className="flex items-center gap-2 cursor-pointer">
+        <div className="flex items-center gap-2 cursor-pointer group">
           <div>
             <img
               src="https://i.pinimg.com/736x/ce/55/7f/ce557f0307ae8ab10c43409a06530475.jpg"
@@ -67,7 +100,7 @@ export default function Header(params) {
               className="rounded h-10 w-10"
             />
           </div>
-          <div className=" w-6 h-6 cursor-pointer">
+          <div className=" w-6 h-6 cursor-pointer group-hover:rotate-180 transition duration-200">
             <svg
               viewBox="0 0 24 24"
               fill="none"

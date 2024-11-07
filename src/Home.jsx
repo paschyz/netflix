@@ -3,11 +3,9 @@ import Videos from "./Videos";
 import Header from "./Header";
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Header></Header>
-      <div>
-        <Videos></Videos>
-      </div>
+      <div>{/* <Videos></Videos> */}</div>
     </div>
   );
 }
