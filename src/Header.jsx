@@ -1,4 +1,6 @@
 import { profiles } from "./utils";
+import { Link } from "react-router-dom";
+
 export default function Header(params) {
   return (
     <header className="flex justify-between h-[41px] px-16 py-10 items-center fixed w-full">
@@ -6,13 +8,13 @@ export default function Header(params) {
         <div className="mr-16">
           <a href="">
             <img
-              className="max-h-16 "
+              className="max-h-16 max-w-64"
               src="https://awfulannouncing.com/wp-content/uploads/sites/94/2015/05/Netflix_Web_Logo.png"
               alt=""
             />
           </a>
         </div>
-        <ul className="flex gap-8 font-light text-[#E5E5E5] ">
+        <ul className="hidden gap-8 font-light text-[#E5E5E5] xl:flex">
           <li className="pointer-events-none font-semibold">Home</li>
           <li className="cursor-pointer hover:text-[#B3B3B3] transition duration-500">
             TV Shows
@@ -30,6 +32,66 @@ export default function Header(params) {
             Browse by Languages
           </li>
         </ul>
+        <div className="flex items-center xl:hidden cursor-pointer group/browse">
+          <p className=" ">Browse</p>
+          <svg
+            className=" w-6 h-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <path d="M18 9H6L12 15L18 9Z" fill="#ffffff"></path>{" "}
+            </g>
+          </svg>
+          <div className=" group-hover/browse:block hidden bg-[rgba(0,0,0,0.9)] absolute top-24 left-32 w-[350px]">
+            <ul className="flex flex-col  ">
+              <li
+                className="py-5  hover:brightness-200  w-full text-center cursor-pointer
+            "
+              >
+                Home
+              </li>
+              <li
+                className="py-5  hover:brightness-200  w-full text-center cursor-pointer
+            "
+              >
+                TV Shows
+              </li>
+              <li
+                className="py-5  hover:brightness-200  w-full text-center cursor-pointer
+            "
+              >
+                Movies
+              </li>
+              <li
+                className="py-5  hover:brightness-200  w-full text-center cursor-pointer
+            "
+              >
+                News & Popular
+              </li>
+              <li
+                className="py-5  hover:brightness-200  w-full text-center cursor-pointer
+            "
+              >
+                My List
+              </li>
+              <li
+                className="py-5  hover:brightness-200  w-full text-center cursor-pointer
+            "
+              >
+                Browse by Languages
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div className="flex items-center gap-8 ">
         <div className="search-icon h-8 cursor-pointer">
@@ -104,7 +166,7 @@ export default function Header(params) {
             <img
               src="https://i.pinimg.com/736x/ce/55/7f/ce557f0307ae8ab10c43409a06530475.jpg"
               alt="profile-icon"
-              className="rounded h-10 w-10"
+              className="rounded h-10 w-10 max-w-20"
             />
           </div>
           <div className=" w-6 h-6 cursor-pointer group-hover:rotate-180 transition duration-200">
@@ -131,17 +193,19 @@ export default function Header(params) {
               <ul className="">
                 {profiles.map((profile, index) => {
                   return (
-                    <li
-                      className=" flex mx-4 mt-4 items-center group/profile cursor-pointer"
-                      key={index}
-                    >
-                      <div
-                        style={{ backgroundImage: `url(${profile.url})` }}
-                        className="rounded h-10 w-10 bg-cover mr-[12px]"
-                      ></div>
-                      <span className="group-hover/profile:underline brightness-200">
-                        {profile.name}
-                      </span>
+                    <li className=" " key={index}>
+                      <Link
+                        to="/"
+                        className="flex mx-4 mt-4 items-center group/profile cursor-pointer"
+                      >
+                        <div
+                          style={{ backgroundImage: `url(${profile.url})` }}
+                          className="rounded h-10 w-10 bg-cover mr-[12px]"
+                        ></div>
+                        <span className="group-hover/profile:underline brightness-200">
+                          {profile.name}
+                        </span>
+                      </Link>
                     </li>
                   );
                 })}
@@ -245,9 +309,11 @@ export default function Header(params) {
               </ul>
               <ul className="border-t-[1px] border-white ">
                 <li className="flex justify-center px-2 cursor-pointer group/sign-out my-[20px]">
-                  <span className="group-hover/sign-out:underline">
-                    Sign out of Netflix
-                  </span>
+                  <Link to="/">
+                    <span className="group-hover/sign-out:underline">
+                      Sign out of Netflix
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
