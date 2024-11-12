@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header(params) {
   return (
-    <header className="flex justify-between h-[41px] px-16 py-10 items-center fixed w-full">
+    <header className="flex justify-between h-[41px] px-16 py-10 items-center fixed w-full z-50">
       <div className="flex items-center">
         <div className="mr-16">
           <a href="">
