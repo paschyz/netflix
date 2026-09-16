@@ -1,6 +1,5 @@
 import Videos from "./Videos";
 import Header from "./Header";
-import FirstVideos from "./FirstVideos";
 import strangerThingsImage from "./assets/stranger-things.jpg";
 export default function Home() {
   return (
@@ -18,7 +17,11 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[35vh] bg-gradient-to-t from-black via-black/70 to-transparent"></div>
         </div>
         <div className="relative z-10 flex flex-col gap-[50px]">
-          <FirstVideos></FirstVideos>
+          <Videos
+            title="Continue Watching for paschyz"
+            featured
+            randomize={false}
+          ></Videos>
           <Videos title="Trending Now"></Videos>
           <Videos title="Popular on Netflix"></Videos>
           <Videos title="Because You Watched Stranger Things"></Videos>
