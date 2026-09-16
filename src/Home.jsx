@@ -18,11 +18,11 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-[50px]">
           <FirstVideos></FirstVideos>
-          <Videos></Videos>
-          <Videos></Videos>
-          <Videos></Videos>
-          <Videos></Videos>
-          <Videos></Videos>
+          <Videos title="Trending Now"></Videos>
+          <Videos title="Popular on Netflix"></Videos>
+          <Videos title="Because You Watched Blue Lock"></Videos>
+          <Videos title="Action & Adventure"></Videos>
+          <Videos title="More Like This"></Videos>
         </div>
       </div>
     </div>
