@@ -105,7 +105,7 @@ Every push to `main` triggers [.github/workflows/deploy.yml](.github/workflows/d
 The Vite base path is configured for the repository deployment URL:
 
 ```js
-base: "/netflix/"
+base: "/netflix/";
 ```
 
 The application uses `createHashRouter` because GitHub Pages does not provide server-side fallback routing for browser history URLs.
