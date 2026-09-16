@@ -6,7 +6,9 @@ The project focuses on recreating the main browsing experience: profile selectio
 
 ## Live Demo
 
-[Open the deployed application](https://paschyz.github.io/netflix/)
+[Demo Link](https://paschyz.github.io/netflix/)
+
+<img width="1535" height="960" alt="image" src="https://github.com/user-attachments/assets/27017092-2d7e-42f3-b197-aaa0367b3af0" />
 
 ## Project Scope
 
