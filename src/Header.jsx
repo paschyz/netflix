@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 export default function Header(params) {
   return (
-    <header className="flex justify-between h-[41px] px-16 py-10 items-center fixed w-full z-50">
-      <div className="flex items-center">
-        <div className="mr-16">
+    <header className="fixed z-50 flex h-auto w-full items-center justify-between px-4 py-5 sm:px-8 sm:py-7 lg:px-16 lg:py-10">
+      <div className="flex min-w-0 items-center">
+        <div className="mr-5 sm:mr-10 lg:mr-16">
           <a href="">
             <img
-              className="max-h-16 max-w-64"
+              className="w-20 max-w-[22vw] sm:w-28 lg:w-36"
               src="https://awfulannouncing.com/wp-content/uploads/sites/94/2015/05/Netflix_Web_Logo.png"
               alt=""
             />
@@ -93,8 +93,8 @@ export default function Header(params) {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-8 ">
-        <div className="search-icon h-8 cursor-pointer">
+      <div className="flex items-center gap-3 sm:gap-5 lg:gap-8">
+        <div className="search-icon hidden h-8 cursor-pointer sm:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -115,8 +115,8 @@ export default function Header(params) {
           </svg>
         </div>
 
-        <div>
-          <a className="">Kids</a>
+        <div className="hidden sm:block">
+          <a>Kids</a>
         </div>
         <div className="bell-icon h-8 group/bell group/carrier">
           <svg
@@ -138,8 +138,8 @@ export default function Header(params) {
             ></path>
           </svg>
 
-          <div className="opacity-0 hidden group-hover/bell:flex group/hitbox bg-white  absolute border-t-[3px] right-[160px] top-[40px] w-[510px] h-[148px]"></div>
-          <div className="hidden hover:flex group-hover/hitbox:flex  group-hover/bell:flex items-center justify-center absolute border-t-[3px] border-white bg-[rgba(0,0,0,0.9)] opacity-75 right-[160px] top-[87px] w-[510px] h-[148px] hover:opacity-100">
+          <div className="absolute right-4 top-16 hidden h-[148px] w-[calc(100vw-2rem)] max-w-[510px] bg-white opacity-0 group-hover/bell:flex group/hitbox border-t-[3px] sm:right-40 sm:top-10"></div>
+          <div className="absolute right-4 top-24 hidden h-[148px] w-[calc(100vw-2rem)] max-w-[510px] items-center justify-center border-t-[3px] border-white bg-[rgba(0,0,0,0.9)] opacity-75 group-hover/bell:flex group-hover/hitbox:flex hover:opacity-100 sm:right-40 sm:top-[87px]">
             <p className="text-[#6D6D6D] text-xl  ">No recent notifications</p>
 
             <svg
@@ -188,7 +188,7 @@ export default function Header(params) {
             </svg>
           </div>
           <div className="opacity-0 hidden group-hover:block group-hitbox absolute w-[66px] h-[50px] bg-white top-12 right-[70px]"></div>
-          <div className="group-hover:block group-hitbox:block hidden bg-[rgba(0,0,0,0.9)] opacity-100  h-[560px] w-[280px] absolute right-[70px] top-[90px] text-white pt-1 cursor-default">
+          <div className="group-hover:block group-hitbox:block absolute right-4 top-20 hidden h-[560px] w-[calc(100vw-2rem)] max-w-[280px] cursor-default bg-[rgba(0,0,0,0.9)] pt-1 text-white opacity-100 sm:right-[70px] sm:top-[90px]">
             <div>
               <ul className="">
                 {profiles.map((profile, index) => {

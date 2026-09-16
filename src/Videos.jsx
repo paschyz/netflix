@@ -26,19 +26,19 @@ export default function Videos({ title }) {
   const [randomizedThumbnails] = useState(() => shuffle(thumbnails));
 
   return (
-    <div className="ml-[75px] ">
-      <h1 className="text-[28px] mb-4 font-medium">
+    <div className="ml-4 sm:ml-10 lg:ml-[75px]">
+      <h1 className="mb-4 text-xl font-medium sm:text-2xl lg:text-[28px]">
         {title}
       </h1>
       <div>
-        <div className="flex h-[13.5vh] gap-2 ">
+        <div className="flex h-[clamp(110px,13.5vh,190px)] gap-2 overflow-x-auto pb-2 pr-4 scrollbar-hide">
           {randomizedThumbnails.map((thumbnail) => {
             return (
               <img
                 key={thumbnail}
                 src={thumbnail}
                 alt=""
-                className="rounded cursor-pointer"
+                className="aspect-video h-full w-[42vw] flex-shrink-0 rounded object-cover cursor-pointer sm:w-[27vw] lg:w-auto"
               />
             );
           })}

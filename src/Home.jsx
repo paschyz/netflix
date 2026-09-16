@@ -1,18 +1,17 @@
-import { useState } from "react";
 import Videos from "./Videos";
 import Header from "./Header";
 import FirstVideos from "./FirstVideos";
 import strangerThingsImage from "./assets/stranger-things.jpg";
 export default function Home() {
   return (
-    <div className="">
+    <div className="min-h-screen overflow-x-hidden">
       <div>
         <Header></Header>
       </div>
-      <div className="w-full h-[65vh] absolute">
-        <div className="relative z-0 h-[80vh] overflow-hidden">
+      <div className="relative w-full">
+        <div className="relative z-0 h-[65vh] overflow-hidden sm:h-[80vh]">
           <img
-            className="h-[80vh] w-[100vw]"
+            className="block h-full w-full object-cover"
             src={strangerThingsImage}
             alt="thumbnail"
           />
@@ -22,7 +21,7 @@ export default function Home() {
           <FirstVideos></FirstVideos>
           <Videos title="Trending Now"></Videos>
           <Videos title="Popular on Netflix"></Videos>
-          <Videos title="Because You Watched Blue Lock"></Videos>
+          <Videos title="Because You Watched Stranger Things"></Videos>
           <Videos title="Action & Adventure"></Videos>
           <Videos title="More Like This"></Videos>
         </div>
