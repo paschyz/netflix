@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { profiles } from "./utils";
 export default function Profiles() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,7 @@ export default function Profiles() {
             {profiles.map((profile, index) => {
               return (
                 <li className="hover:text-white text-[#808080]" key={index}>
-                  <a href="/home">
+                  <Link to="/home">
                     <div
                       style={{ backgroundImage: `url(${profile.url})` }}
                       className="h-[10vw] w-[10vw] bg-cover rounded-[4px] hover:outline-[3px] hover:outline "
@@ -22,7 +23,7 @@ export default function Profiles() {
                     <span className="text-center block my-[.6em] text-[1.3vw]  ">
                       {profile.name}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               );
             })}

@@ -1,7 +1,7 @@
-import { Outlet, createBrowserRouter } from "react-router-dom";
+import { Outlet, createHashRouter } from "react-router-dom";
 import Profiles from "./Profiles";
 import Home from "./Home";
-export default createBrowserRouter([
+export default createHashRouter([
   {
     path: "/",
     element: <Outlet />,
