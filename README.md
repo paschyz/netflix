@@ -17,10 +17,11 @@ The project focuses on recreating the main browsing experience: profile selectio
 - Profile selection screen with React Router navigation.
 - Netflix-style home screen with a featured Stranger Things visual.
 - Content rows with category labels such as Trending Now and Popular on Netflix.
-- Randomized thumbnail ordering for each content row.
+- Reusable content rows with configurable category titles.
+- Randomized thumbnail ordering for discovery rows, while the Continue Watching row preserves its order.
 - Responsive layout for mobile, tablet and desktop viewports.
 - Responsive header with navigation, notifications and profile menu states.
-- Local media asset handling for the featured image.
+- Local asset handling for the featured Stranger Things image.
 - Hash-based routing, compatible with GitHub Pages hosting.
 - Automated production deployment through GitHub Actions.
 
@@ -30,7 +31,7 @@ This is a front-end portfolio project and visual UI recreation. It does not incl
 
 ## Technical Highlights
 
-- Component-based UI architecture with React.
+- Component-based UI architecture with React, including a reusable `Videos` row component.
 - Client-side routing with `react-router-dom`.
 - Utility-first responsive styling with Tailwind CSS.
 - Vite asset bundling and production builds.
@@ -91,11 +92,10 @@ npm run lint
 ```text
 src/
 ├── assets/       Local images and media
-├── FirstVideos   Continue-watching content row
 ├── Header        Responsive navigation and profile menu
 ├── Home          Featured content and video categories
 ├── Profiles      Profile selection screen
-├── Videos        Reusable randomized content row
+├── Videos        Reusable configurable content row
 ├── router        Client-side route definitions
 └── main.jsx      Application entry point
 ```
